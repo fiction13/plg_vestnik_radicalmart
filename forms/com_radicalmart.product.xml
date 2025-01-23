@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package   Vestnik - RadicalMart
+  ~ @version   __DEPLOY_VERSION__
+  ~ @author    Dmitriy Vasyukov - https://fictionlabs.ru
+  ~ @copyright Copyright (c) 2025 Fictionlabs. All rights reserved.
+  ~ @license   GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+  ~ @link      https://fictionlabs.ru/
+  -->
+
+<form>
+    <fields name="params" addfieldprefix="Joomla\Component\Vestnik\Administrator\Field">
+        <fieldset name="vestnik" label="COM_VESTNIK">
+            <field name="vestnik_add"
+                   type="radio"
+                   default="0"
+                   class="btn-group btn-group-yesno"
+                   label="COM_VESTNIK_PARAMS_ADD">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+
+            <field name="vestnik_date" type="calendar"
+                   label="JDATE"
+                   translateformat="true"
+                   showtime="true"
+                   size="22"
+                   filter="user_utc"
+                   class="input-medium"
+                   showon="vestnik_add:1" />
+
+            <field name="vestnik_date" type="calendar"
+                   label="JDATE"
+                   translateformat="true"
+                   showtime="true"
+                   size="22"
+                   filter="user_utc"
+                   class="input-medium"
+                   showon="vestnik_add:1" />
+
+            <field name="hashtags" type="hashtags"
+                   label="COM_VESTNIK_HASHTAGS"
+                   multiple="true"
+                   layout="joomla.form.field.list-fancy-select"
+                   showon="vestnik_add:1" />
+        </fieldset>
+    </fields>
+</form>
