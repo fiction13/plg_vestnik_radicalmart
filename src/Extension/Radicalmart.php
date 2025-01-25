@@ -67,9 +67,10 @@ class Radicalmart extends CMSPlugin implements SubscriberInterface
 	 */
 	public function onVestnikPrepareForm($form, $data)
 	{
+		$app      = Factory::getApplication();
 		$formName = $form->getName();
 
-		if ($formName === 'com_config.component')
+		if ($formName === 'com_config.component' && $app->getInput()->get('component') === 'com_vestnik')
 		{
 			// Add path
 			Form::addFormPath(JPATH_PLUGINS . '/' . $this->_type . '/' . $this->_name . '/forms');
